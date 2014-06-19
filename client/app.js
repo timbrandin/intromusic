@@ -65,7 +65,8 @@ Deps.autorun(function() {
 
 Template.results.helpers({
   image: function() {
-    var twitteruser = TwitterUsers.findOne({screen_name: this.handle});
+    var pattern = new RegExp('^' + this.handle + '$', 'i');
+    var twitteruser = TwitterUsers.findOne({screen_name: pattern});
     if (twitteruser) {
       return twitteruser.profile_image_url.replace('normal', '400x400');
     }
