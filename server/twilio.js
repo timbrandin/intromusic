@@ -7,7 +7,7 @@ Meteor.Router.add('/api/twiml/sms', 'POST', function() {
     //   twilioRawIn.insert(rawIn);
     // }
 
-    var handle = rawIn.Body.replace('/^\@/', '');
+    var handle = rawIn.Body.replace('@', '');
 
     var name = Meteor.call('getTwitterUser', handle);
     var assessment = Meteor.call('createAssessment');
