@@ -1,0 +1,9 @@
+{
+  "name": "traitify",
+  "description": "Traitify API Wrapper for meteor",
+  "homepage": "",
+  "author": "Your Name <your@email> (http://yoursite)",
+  "version": "1.0.0",
+  "git": "",
+  "packages": {}
+}

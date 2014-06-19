@@ -1,0 +1,81 @@
+<head>
+  <script src="http://cdn.traitify.com/js/api/1.0.0.js"></script>
+  <script src="http://cdn.traitify.com/js/widgets/slide_deck/1.0.0.js"></script>
+  <script type="text/javascript" src="/js/modernizr.custom.79639.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.ba-cond.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.slitslider.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<template name="home">
+  <div class="home">
+    <img class="logo" src="/images/logo.png" />
+    <h1>+1 (802) 518 4581</h1>
+    <h2>Text your Twitter handle, and discover your personality music intro.</h2>
+    {{#each users}}
+    <div class="profile {{completed}}">
+      {{#if assessmentId}}
+      <a href="/r/{{assessmentId}}">
+        <img src="{{image}}" />
+      </a>
+      {{else}}
+      <img src="{{image}}" />
+      {{/if}}
+      <div>
+        <span class="name">@{{screen_name}}</span>
+        <span class="followers">{{followers_count}}</span>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</template>
+
+<template name="assessment">
+  <div class="tf-assessment"></div>
+</template>
+
+<template name="results">
+  <div class="container demo-1">
+
+            <div id="slider" class="sl-slider-wrapper">
+
+				<div class="sl-slider" style="width: 598px; height: 696px;">
+
+
+					<div class="sl-slides-wrapper"><div class="sl-slide bg-1 sl-slide-horizontal" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2" style="display: block;">
+						<div class="sl-content-wrapper" style="width: 598px; height: 696px;">
+              <div class="sl-content"><div class="sl-slide-inner">
+                {{#with this}}
+  							<div class="deco">
+                  <img src="{{image}}">
+                </div>
+  							<h2>{{name}}</h2>
+                {{/with}}
+                {{#with music}}
+                <blockquote>
+                  <cite>{{artist}} - {{song}}</cite>
+                  <audio class="audioPlayer" controls="" autoplay="true">
+                    <source src="/music/{{file}}" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                  </audio>
+                </blockquote>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-text="@{{handle}} got {{artist}} - {{song}}">Tweet</a>
+                {{/with}}
+  						</div>
+            </div>
+          </div>
+
+				</div></div>
+
+					<!-- /sl-slider -->
+				<nav id="nav-arrows" class="nav-arrows">
+					<span class="nav-arrow-prev">Previous</span>
+					<span class="nav-arrow-next">Next</span>
+				</nav>
+
+			</div><!-- /slider-wrapper -->
+      </div>
+
+</div>
+</template>

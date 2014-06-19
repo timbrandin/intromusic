@@ -1,0 +1,8 @@
+{
+  "packages": {
+    "twilio": {},
+    "router": {},
+    "twitter-api": {},
+    "iron-router": {}
+  }
+}

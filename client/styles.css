@@ -1,0 +1,73 @@
+.home img {
+  border-radius: 50% 50%;
+  width: 110px;
+  height: 110px;
+  min-width: initial;
+  min-height: initial;
+  margin: 15px;
+  border: solid white;
+}
+
+img.logo {
+  width: 400px;
+  height: 100px;
+  min-width: initial;
+  min-height: initial;
+  border-radius: 0;
+  border: none;
+  margin: 0 auto;
+  display: block;
+}
+
+.twitter-share-button {
+  position: absolute;
+  top: 377px;
+  left: 50%;
+  margin-left: -38px;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.home {
+  width: 100%;
+  min-height: 100%;
+  background: #111;
+}
+
+.home h1, .home h2 {
+  text-align: center;
+  color: white;
+}
+
+.home {
+  padding: 30px;
+}
+
+.home h2 {
+  font-size: 18px;
+  padding: 0 30px 15px;
+}
+
+.home h1 {
+  padding: 30px;
+}
+
+.profile {
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+  color: white;
+  margin: 15px;
+  text-align: center;
+}
+
+.completed img {
+  border-color: #12d24a;
+}
+
+.followers {
+  font-weight: bold;
+}
