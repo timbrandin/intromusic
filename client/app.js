@@ -11,7 +11,8 @@ Template.home.helpers({
   },
 
   assessmentId: function() {
-    var profile = Profiles.findOne({handle: this.screen_name});
+    var pattern = new RegExp('^' + this.screen_name + '$', 'i');
+    var profile = Profiles.findOne({handle: pattern});
     if (profile) {
       return profile.assessmentId;
     }
