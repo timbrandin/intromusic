@@ -15,6 +15,7 @@ Meteor.Router.add('/api/twiml/sms', 'POST', function() {
     Profiles.insert({
       handle: handle,
       name: name,
+      phone: rawIn.From,
       assessmentId: assessment.id
     });
 
